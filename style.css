@@ -15,7 +15,6 @@ html{
 body{
   font-size: 1.6rem;
   font-family: "Josefin Sans", sans-serif;
-  cursor: grab;
   background-color: white;
   
   
@@ -103,7 +102,7 @@ header{
   color: var(--color-white);
   padding-bottom: 5rem;
   font-weight: 700;
-  font-size: 4rem;
+  font-size: 6rem;
   line-height: 1.7;
 }
 
@@ -205,17 +204,20 @@ header{
   font-size: 2rem;
 }
 .more-rentals-btn{
+display: flex;
 align-items: center;
+margin-top: 3rem;
+justify-content: center;
 
 }
-
+/*
 .twoself{
   width: 1000%;
   padding-left: 20rem;
   height: 60%;
 
 }
-
+*/
 .twobed{
   width: 80%;
 }
@@ -225,14 +227,7 @@ align-items: center;
   padding-bottom: 3rem;
 }
 
-@media screen and (max-width: 59.34em) {
-  .amenities{
-    flex-direction: column;
-    gap: 2rem;
-    justify-content: center;
-  }
-  
-}
+
 
 .amenities-item-container{
   padding-inline: 1rem;
@@ -240,6 +235,7 @@ align-items: center;
   flex-wrap: wrap;
   gap: 1rem;
   justify-content: center;
+  flex-direction: row;
 }
 
 .amenities-card{
@@ -251,10 +247,24 @@ align-items: center;
 
 }
 
+@media screen and (max-width: 59.34em) {
+  .amenities-item-container{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+  }
+  
+}
+
 
 
 .amenities-card-image{
   width: 100%;
+  height: 40%;
+
 }
 
 .amenities-card-details{
@@ -281,6 +291,14 @@ align-items: center;
   .about-section{
     flex-direction: column;
   }
+  .about-text{
+    width: 90%;
+    order: 2;
+  }
+  .location-img{
+    width: 90%;
+    order: 1;
+  }
   
 }
 
@@ -298,6 +316,12 @@ align-items: center;
   line-height: 1.7;
   color: #333;
 }
+ @media screen and (max-width:50em) {
+  .about-text{
+    
+  }
+  
+ }
 
 .about-link{
   text-decoration: none;
@@ -318,11 +342,14 @@ align-items: center;
 }
 
 .form{
-  padding: 0 20px;
+  padding:20px;
   border: 1px solid rgba(0, 0, 0, .1);
-  width: 45%;
-  display: block;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
+  margin-inline: 20px;
 }
 label{
   display: block;
@@ -335,6 +362,12 @@ label{
   display: block;
   padding: 10px 15px;
   width: 60%;
+  border-radius: 5px;
+
+}
+
+.form-input:hover{
+  border-color: aquamarine;
 }
 
 .input{
@@ -358,12 +391,19 @@ button{
   display: block;
   padding-bottom: 7px;
   text-transform: capitalize;
+  text-align: center;
 
 }
+
+button:hover{
+  background-color: aquamarine;
+}
+
 .coments{
-  align-items: center;
+  display: flex;
   justify-content: center;
   padding: 20px 50px;
+  align-items: center;
 }
 
 .communications{
